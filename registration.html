@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Committees | MUNI XXVII</title>
+    <title>Registration | MUNI XXVII</title>
     <link rel="apple-touch-icon" sizes="180x180" href="../assets/favicon/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="../assets/favicon/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="../assets/favicon/favicon-16x16.png">
@@ -26,26 +26,22 @@
 <body>
     <div class="relative">
         <!-- START NAVIGATION -->
-        <div class="fixed top-0 w-full text-white text-center py-2 px-4 font-semibold text-sm z-50"
-            style="background-color: #13294B;">
-            You are viewing an archive page of MUNI XXVII. Click <a href="http://muni.illinoismun.org"
-                class="hover:underline no-underline">here</a> to go to the current website.
-        </div>
 
-        <div id="full-nav" class="mt-10 absolute w-full top-0 py-5 z-20 transition ease-linear">
+        <div id="full-nav" class="absolute w-full top-0 py-5 z-50 transition ease-linear">
             <div class="max-w-6xl mx-auto px-6">
                 <div class="flex items-center container">
                     <a href="./"><img id="logo-area" src="../assets/model-un-logo-outline.png" alt="logo"
                             style="float: left;" class="w-32"></a>
                     <div class="ml-auto sm:flex text-white font-sans hidden">
+
                         <div class="dropdown ml-8 font-semibold uppercase text-sm">
-                            <a class="title-link ml-8 font-semibold uppercase text-sm">MUNI XXVII</a>
+                            <a class="title-link ml-8 font-semibold uppercase text-sm">MUNI XXVIII</a>
                             <div class="dropdown-menu">
-                                <a class="subtitle-link" href="./about">Meet The Secretariat</a>
-                                <a class="subtitle-link" href="./committees">Committee Introduction</a>
+                                <!-- <a class="subtitle-link" href="./about">Meet The Secretariat</a> -->
+                                <!-- <a class="subtitle-link" href="./committees">Committee Introduction</a> -->
                                 <a class="subtitle-link" href="./schedule">Conference Schedule</a>
                                 <a class="subtitle-link" href="./registration">Registration</a>
-                                <a class="subtitle-link" href="./logistics">Logistics</a>
+                                <!-- <a class="subtitle-link" href="./logistics">Logistics</a> -->
                             </div>
                         </div>
                         <div class="dropdown ml-8 font-semibold uppercase text-sm">
@@ -59,6 +55,15 @@
                             <a class="title-link ml-8 font-semibold uppercase text-sm" href="./sponsor">Sponsorship</a>
 
                         </div> -->
+                        <div class="dropdown ml-8 font-semibold uppercase text-sm">
+                            <a class="title-link ml-8 font-semibold uppercase text-sm">Archive</a>
+                            <div class="dropdown-menu">
+                                <a class="subtitle-link" href="./muni-xxvii/">MUNI XXVII</a>
+                            </div>
+                        </div>
+                        <div class="dropdown ml-8 font-semibold uppercase text-sm">
+                            <a class="title-link ml-8 font-semibold uppercase text-sm" href="./contact">Contact</a>
+                        </div>
 
                     </div>
                     <button id="tog" class="ml-auto md:hidden text-xl text-gray1 pr-5" onclick="showDiv()">
@@ -84,20 +89,14 @@
                 </button>
             </div>
             <div class="flex flex-col justify-center items-end font-sans h-full text-white">
-                <!-- <a class="font-semibold uppercase text-sm my-4" href="javascript:void(0)"
-                        onclick="toggleSubmenu('imun-submenu')">Illinois MUN</a> -->
-                <!-- <div id="imun-submenu" class="submenu hidden pl-4">
-                        <a class="font-semibold uppercase text-sm my-4" href="./schedule">Club Schedule</a>
-                        <a class="font-semibold uppercase text-sm my-4" href="./joinus">Join Us</a>
-                    </div> -->
                 <a class="font-semibold uppercase text-sm my-4" href="javascript:void(0)"
-                    onclick="toggleSubmenu('muni-submenu')">MUNI XXVII</a>
+                    onclick="toggleSubmenu('muni-submenu')">MUNI XXVIII</a>
                 <div id="muni-submenu" class="submenu hidden pl-4">
-                    <a class="font-semibold uppercase text-sm my-4" href="./about">Meet The Secretariat</a>
-                    <a class="font-semibold uppercase text-sm my-4" href="./committees">Committee Introduction</a>
+                    <!-- <a class="font-semibold uppercase text-sm my-4" href="./about">Meet The Secretariat</a> -->
+                    <!-- <a class="font-semibold uppercase text-sm my-4" href="./committees">Committee Introduction</a> -->
                     <a class="font-semibold uppercase text-sm my-4" href="./schedule">Conference Schedule</a>
                     <a class="font-semibold uppercase text-sm my-4" href="./registration">Registration</a>
-                    <a class="font-semibold uppercase text-sm my-4" href="./logistics">Logistics</a>
+                    <!-- <a class="font-semibold uppercase text-sm my-4" href="./logistics">Logistics</a> -->
                 </div>
                 <a class="font-semibold uppercase text-sm my-4" href="javascript:void(0)"
                     onclick="toggleSubmenu('delegate-resources')">Delegate Resources</a>
@@ -106,111 +105,42 @@
                     <a class="font-semibold uppercase text-sm my-4" href="./ga">General Assemblies</a>
                     <a class="font-semibold uppercase text-sm my-4" href="./crisis">Crisis Committees</a>
                 </div>
-                <!-- <a class="font-semibold uppercase text-sm my-4" href="./contact">Contact</a> -->
+                <a class="font-semibold uppercase text-sm my-4" href="./contact">Contact</a>
+
+                <a class="font-semibold uppercase text-sm my-4" href="javascript:void(0)"
+                    onclick="toggleSubmenu('archive')">Archive</a>
+                <div id="archive" class="submenu hidden pl-4">
+
+                    <a class="font-semibold uppercase text-sm my-4" href="./muni-xxvii/">MUNI XXVII</a>
+                </div>
             </div>
         </div>
-
-        <!-- <section
+        <section
             class="relative flex h-[25vh] md:h-[40vh] shrink-0 flex-col items-center justify-center font-serif text-white -z-10">
             <img class="fixed brightness-50 w-full  object-cover object-top h-fill" src="../assets/quad.jpeg"></img>
-        </section> -->
-        <!-- END NAVIGATION -->
-        <section
-            class="relative flex min-h-screen h-[100vh] shrink-0 flex-col items-center justify-center font-serif text-white -z-10">
-            <video class="fixed brightness-75 w-full h-full object-cover" muted autoplay loop playsinline
-                disablepictureinpicture>
-                <source src="../assets/disec2.mp4" type="video/mp4" />
-            </video>
-            <h1 class="fixed max-w-5xl text-5xl sm:text-6xl font-bold text-center leading-tight md:leading-snug">
-                Disarmament and International Security Committee</h1>
-
-
-            <svg fill="#ffffff" class="z-10 fixed animate-bounce bottom-10" height="5vh" version="1.1" id="Layer_1"
-                xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 330 330"
-                xml:space="preserve">
-                <path id="XMLID_225_" d="M325.607,79.393c-5.857-5.857-15.355-5.858-21.213,0.001l-139.39,139.393L25.607,79.393
-                c-5.857-5.857-15.355-5.858-21.213,0.001c-5.858,5.858-5.858,15.355,0,21.213l150.004,150c2.813,2.813,6.628,4.393,10.606,4.393
-                s7.794-1.581,10.606-4.394l149.996-150C331.465,94.749,331.465,85.251,325.607,79.393z" />
-            </svg>
         </section>
+        <!-- END NAVIGATION -->
         <section class="w-full z-20 bg-white h-full">
-            <div class="max-w-3xl px-16 md:px-0 mx-auto pb-20">
-                <div class="pt-12"></div>
-                <a class="group/edit flex items-center" href="./committees">
-                    <svg fill="#000000" class="group-hover/edit:-translate-x-1.5 transition ease-in-out duration-200"
-                        height="1.5em" viewBox="0 0 256 256" id="Flat" xmlns="http://www.w3.org/2000/svg">
-                        <path
-                            d="M220,128a4.0002,4.0002,0,0,1-4,4H49.65674l65.17138,65.17187a3.99957,3.99957,0,1,1-5.65625,5.65625l-72-72a3.99854,3.99854,0,0,1,0-5.65625l72-72a3.99957,3.99957,0,0,1,5.65625,5.65625L49.65674,124H216A4.0002,4.0002,0,0,1,220,128Z" />
-                    </svg>
-                    <span class="ml-2 text-sm font-light uppercase">Committees</span>
-                </a>
-                <!-- <h1 class="pt-12 text-3xl font-serif font-bold">Background Guide</h1>
-                <p class="text-base font-light font-sans pt-5"><span >Background guides will
-                        be released with positions following the deposit deadline of March 13th. </span>
-                </p> -->
-                <div class="flex items-center justify-center text-center">
-                    <a href="https://drive.google.com/file/d/1SuXHsFYQ6KV-Uy0ig60clNLXreqK_F6U/view?usp=sharing"
-                        target="_blank">
-                        <button
-                            class="mt-8 bg-transparent transition ease-in-out duration-200 hover:bg-gray-900 text-gray-900 font-semibold hover:text-white py-3.5 px-6 border border-gray-900 hover:border-transparent rounded">
-                            <p class="text-xs uppercase">Background Guide</p>
-                        </button>
-                    </a>
-                </div>
-                <div class="flex items-center justify-center text-center pt-5">
-                    <p class="italic text-base font-light font-sans">You will need a device (laptop, tablet) for this
-                        committee. Position papers are not required.</p>
-                </div>
-                <p class="text-base font-light font-sans pt-5"><span class="font-bold font-serif">Type:</span> General
-                    Assembly
-                </p>
-                <p class="text-base font-light font-sans pt-5"><span class="font-bold font-serif">Delegation
-                        Size:</span> Single</p>
-                <p class="text-base font-light font-sans pt-5"><span class="font-bold font-serif">Experience:</span>
-                    Beginner</p>
-                <p class="text-base font-light font-sans pt-5"><span class="font-bold font-serif">Structure:</span>
-                    Tech</p>
-
-                <h1 class="pt-12 text-3xl font-serif font-bold">About</h1>
-                <p class="text-base font-light font-sans pt-8">
-                    Welcome to the Disarmament and International Security
-                    Committee (DISEC)! Here delegates will choose between two crucial topics shaping global security:
-                    autonomous weapons systems (AWS) and the sustainable demilitarization of space. These issues
-                    challenge international law, ethics, and geopolitical stability, requiring careful deliberation to
-                    craft effective solutions.
-                </p>
-                <p class="text-base font-light font-sans pt-8">
-
-                    Autonomous weapons systems (AWS) raise urgent questions about the role of AI in warfare. With
-                    drones, unmanned naval systems, and robotic combat units increasingly used, the debate centers on
-                    regulation, accountability, and the risks of removing human oversight from lethal decision-making.
-                    Some nations see AWS as a means to enhance security, while others warn of ethical and legal
-                    violations, pushing for strict international controls. It will be your task to balance these
-                    priorities that have hobbled international cooperation for years.
-                </p>
-                <p class="text-base font-light font-sans pt-8">
-
-                    Alternatively, the sustainable demilitarization of space addresses the growing risk of weaponization
-                    beyond Earth's atmosphere. While treaties like the Outer Space Treaty of 1967 set initial
-                    guidelines, new challenges have emerged: the development of anti-satellite weapons, military space
-                    stations, and concerns over orbital debris. DISEC must find ways to prevent an arms race in space
-                    while once again balancing national security interests and technological advancements.
-                </p>
-                <p class="text-base font-light font-sans pt-8">
-
-                    DISEC will challenge delegates to think critically, find diplomatic compromises, and develop
-                    practical, globally inclusive policies. Welcome to all levels, this committee offers rigorous
-                    debate, strategic negotiation, and an opportunity to learn more about the way the world works.
-                </p>
-
-
-
-
-
+            <div class="max-w-2xl px-16 md:px-0 mx-auto pb-20">
+                <h1 class="pt-24 text-3xl font-serif font-bold">Registration</h1>
+                <p class="text-base font-light font-sans pt-8">The conference registration will open in August 2025.
+                    Until then, please feel free to fill out our interest form below!</p>
+                <!-- <div class="font-serif text-lg my-4 italic">To Be Announced...</div>  -->
+                <iframe
+                    src="https://docs.google.com/forms/d/e/1FAIpQLSdQIzj7ySAPX-nR6lsxjiq8zPTfk2EgIB8-sWNcXljIKh5Tdw/viewform?embedded=true"
+                    width="640" height="2131" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+                <!-- <div class="py-5">
+                        <div class="leading-relaxed">
+                            Thank you for your interest in MUNI XXVII. We are excited to share that this year, we have received registration numbers far surpassing our original estimations! It is an honor to know that MUNI XXVII is so highly anticipated by the high school MUN community.
+                            <br><br>
+                            We are currently processing a high volume of registrations, and have temporarily paused accepting incoming registrations while we work to ensure all previously registered delegations can be accommodated! Thank you so much for your understanding, and look forward to an email soon indicating our registration status/accepting new registrations!
+                            <br><br>
+                            If you have any questions, please contact MUNI XXVI’s USG of Registration, Sohail Sajdeh, at <a class="link" href="mailto:registration@illinoismun.org">registration@illinoismun.org</a> or Secretary-General, Nafisa Khan, at <a class="link" href="mailto:secgen@illinoismun.org">secgen@illinoismun.org</a>. Hope to see you at MUNI XXVIII!
+                            <br>
+                        </div>
+                    </div>     -->
             </div>
         </section>
-
-
         <!-- START FOOTER -->
         <footer class="bg-gray-900">
             <div class="mx-auto w-full max-w-5xl p-4 px-12 md:px-0 py-6 md:py-16">
@@ -220,21 +150,11 @@
                             <img src="../assets/model-un-logo-white.png" class="h-8 mr-3" />
                             <span
                                 class="self-center text-2xl font-semibold whitespace-nowrap font-serif text-white">MUNI
-                                XXVII</span>
+                                XXVIII</span>
                         </a>
                     </div>
                     <div class="grid grid-cols-2 gap-8 sm:gap-6">
-                        <div>
-                            <h2 class="mb-6 text-sm font-semibold uppercase text-white">Resources</h2>
-                            <ul class="text-gray-400 font-medium">
-                                <li class="mb-4">
-                                    <a href="./about" class="link-foot">About</a>
-                                </li>
-                                <li>
-                                    <a href="./registration" class="link-foot">Registration</a>
-                                </li>
-                            </ul>
-                        </div>
+                        
                         <div>
                             <h2 class="mb-6 text-sm font-semibold uppercase text-white">Contact us</h2>
                             <ul class="text-gray-400 font-medium">
@@ -277,6 +197,17 @@
         </footer>
         <!-- END FOOTER -->
     </div>
+    <script>
+        function showDiv() {
+            const sidenav = document.getElementById('sidenav');
+            sidenav.style.right = '0'; // Show the sidenav
+        }
+
+        function hideDiv() {
+            const sidenav = document.getElementById('sidenav');
+            sidenav.style.right = '-300px'; // Hide the sidenav
+        }
+    </script>
 </body>
 
 </html>

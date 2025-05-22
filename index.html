@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MUNI XXVII</title>
+    <title>MUNI XXVIII</title>
     <link rel="apple-touch-icon" sizes="180x180" href="../assets/favicon/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="../assets/favicon/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="../assets/favicon/favicon-16x16.png">
@@ -82,8 +82,8 @@
                 disablepictureinpicture>
                 <source src="../assets/hero.mp4" type="video/mp4" />
             </video>
-            <h1 class="fixed text-5xl sm:text-6xl font-bold">MUNI XXVII</h1>
-            <h1 class="fixed text-xl sm:text-2xl mt-24 sm:mt-28">April 18-19th, 2025</h1>
+            <h1 class="fixed text-5xl sm:text-6xl font-bold">MUNI XXVIII</h1>
+            <h1 class="fixed text-xl sm:text-2xl mt-24 sm:mt-28">April 17-18, 2026</h1>
             <h1 id="countdown" class="text-xl bg-transparent text-white p-2 rounded-md border border-white "></h1>
 
             <style>
@@ -112,7 +112,7 @@
         </section>
         <script>
             // Set the date we're counting down to
-            var countDownDate = new Date("April 18, 2025 16:00:00").getTime();
+            var countDownDate = new Date("April 17, 2026 16:00:00").getTime();
 
             // Update the countdown every 1 second
             var x = setInterval(function () {
@@ -149,21 +149,15 @@
                     <a href="./"><img id="logo-area" src="../assets/model-un-logo-outline.png" alt="logo"
                             style="float: left;" class="w-32"></a>
                     <div class="ml-auto sm:flex text-white font-sans hidden">
+
                         <div class="dropdown ml-8 font-semibold uppercase text-sm">
-                            <a class="title-link ml-8 font-semibold uppercase text-sm">Illinois MUN</a>
+                            <a class="title-link ml-8 font-semibold uppercase text-sm">MUNI XXVIII</a>
                             <div class="dropdown-menu">
-                                <a class="subtitle-link" href="./clubschedule">Meeting Schedule</a>
-                                <a class="subtitle-link" href="./joinus">Join Us</a>
-                            </div>
-                        </div>
-                        <div class="dropdown ml-8 font-semibold uppercase text-sm">
-                            <a class="title-link ml-8 font-semibold uppercase text-sm">MUNI XXVII</a>
-                            <div class="dropdown-menu">
-                                <a class="subtitle-link" href="./about">Meet The Secretariat</a>
-                                <a class="subtitle-link" href="./committees">Committee Introduction</a>
+                                <!-- <a class="subtitle-link" href="./about">Meet The Secretariat</a> -->
+                                <!-- <a class="subtitle-link" href="./committees">Committee Introduction</a> -->
                                 <a class="subtitle-link" href="./schedule">Conference Schedule</a>
                                 <a class="subtitle-link" href="./registration">Registration</a>
-                                <a class="subtitle-link" href="./logistics">Logistics</a>
+                                <!-- <a class="subtitle-link" href="./logistics">Logistics</a> -->
                             </div>
                         </div>
                         <div class="dropdown ml-8 font-semibold uppercase text-sm">
@@ -178,8 +172,15 @@
 
                         </div> -->
                         <div class="dropdown ml-8 font-semibold uppercase text-sm">
+                            <a class="title-link ml-8 font-semibold uppercase text-sm">Archive</a>
+                            <div class="dropdown-menu">
+                                <a class="subtitle-link" href="./muni-xxvii/">MUNI XXVII</a>
+                            </div>
+                        </div>
+                        <div class="dropdown ml-8 font-semibold uppercase text-sm">
                             <a class="title-link ml-8 font-semibold uppercase text-sm" href="./contact">Contact</a>
                         </div>
+
                     </div>
                     <button id="tog" class="ml-auto md:hidden text-xl text-gray1 pr-5" onclick="showDiv()">
                         <svg stroke="#ffffff" fill="none" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round"
@@ -205,19 +206,13 @@
             </div>
             <div class="flex flex-col justify-center items-end font-sans h-full text-white">
                 <a class="font-semibold uppercase text-sm my-4" href="javascript:void(0)"
-                    onclick="toggleSubmenu('imun-submenu')">Illinois MUN</a>
-                <div id="imun-submenu" class="submenu hidden pl-4">
-                    <a class="font-semibold uppercase text-sm my-4" href="./schedule">Club Schedule</a>
-                    <a class="font-semibold uppercase text-sm my-4" href="./joinus">Join Us</a>
-                </div>
-                <a class="font-semibold uppercase text-sm my-4" href="javascript:void(0)"
-                    onclick="toggleSubmenu('muni-submenu')">MUNI XXVII</a>
+                    onclick="toggleSubmenu('muni-submenu')">MUNI XXVIII</a>
                 <div id="muni-submenu" class="submenu hidden pl-4">
-                    <a class="font-semibold uppercase text-sm my-4" href="./about">Meet The Secretariat</a>
-                    <a class="font-semibold uppercase text-sm my-4" href="./committees">Committee Introduction</a>
+                    <!-- <a class="font-semibold uppercase text-sm my-4" href="./about">Meet The Secretariat</a> -->
+                    <!-- <a class="font-semibold uppercase text-sm my-4" href="./committees">Committee Introduction</a> -->
                     <a class="font-semibold uppercase text-sm my-4" href="./schedule">Conference Schedule</a>
                     <a class="font-semibold uppercase text-sm my-4" href="./registration">Registration</a>
-                    <a class="font-semibold uppercase text-sm my-4" href="./logistics">Logistics</a>
+                    <!-- <a class="font-semibold uppercase text-sm my-4" href="./logistics">Logistics</a> -->
                 </div>
                 <a class="font-semibold uppercase text-sm my-4" href="javascript:void(0)"
                     onclick="toggleSubmenu('delegate-resources')">Delegate Resources</a>
@@ -227,6 +222,13 @@
                     <a class="font-semibold uppercase text-sm my-4" href="./crisis">Crisis Committees</a>
                 </div>
                 <a class="font-semibold uppercase text-sm my-4" href="./contact">Contact</a>
+
+                <a class="font-semibold uppercase text-sm my-4" href="javascript:void(0)"
+                    onclick="toggleSubmenu('archive')">Archive</a>
+                <div id="archive" class="submenu hidden pl-4">
+
+                    <a class="font-semibold uppercase text-sm my-4" href="./muni-xxvii/">MUNI XXVII</a>
+                </div>
             </div>
         </div>
 
@@ -304,61 +306,62 @@
         <section id="main" class="w-full z-50 bg-white h-full">
 
             <div class="max-w-4xl px-16 md:px-0 mx-auto ">
-
-                <h1 class="pt-24 text-3xl font-serif font-bold flex items-center justify-center text-center">Welcome to
+                <!-- <div class="flex flex-col items-center pt-8">
+                    <i class="text-center">The above date is tentative until closer to the start of the fall semester.</i>
+                </div> -->
+                <h1 class="pt-8 pb-10 text-3xl font-serif font-bold flex items-center justify-center text-center">Welcome to
                     Model United Nations at Illinois.</h1>
-                <div class="pt-20 pb-5">
+                <hr class="pt-2 my-8 border-t-2 border-gray-300 w-full">
+                <div class="pt-8 pb-5">
                     <span class="font-bold text-2xl italic">Letter from the Secretary-General</span>
                 </div>
                 <div class="py-5">
                     <!-- <h1 class="pt-24 text-1xl font-serif font-bold flex items-center">Letter from the Secretary-General.</h1> -->
-                    <img src="../assets/headshots/nafisa.jpg"
+                    <img src="../assets/headshots/divij.jpg"
                         class="w-fit md:w-80 float-none md:float-left pb-10 md:pb-5 md:mr-10">
-                    <div class="leading-relaxed">
-                        It is with great pleasure that I welcome you to Model United Nations at the University of
-                        Illinois, Urbana-Champaign! This coming Spring 2025 marks our 27th annual MUNI conference for
-                        high schoolers, and we are once again thrilled to invite you all to take part in our in-person
-                        format on our historic campus.
-                        <br><br>
-                        MUNI XXVI, our most recent conference this past spring, was an incredible landmark for the
-                        Illinois MUN team: our former Secretary-General, Keon Sung, produced our second successful
-                        in-person event in five years. We are excited to build on this success to bring to you MUNI
-                        XXVII! I am so grateful to our amazing secretariat, general body members, and IMUN alumni for
-                        their hard work in making this conference come to life.
-                        <br><br>
-                        Designed for delegates of all experience levels, MUNI XXVII aims to both enhance the skills of
-                        beginner delegates while allowing more experienced competitors to bring their talents to the
-                        debate floor. We are committed to creating an immersive and, above all, supportive experience
-                        that will have every delegate leaving our closing ceremonies feeling more confident in their
-                        capabilities. With built-in feedback sessions and friendly faces behind every dias, we are eager
-                        to help delegates improve and build upon their strengths, no matter where they are in their MUN
-                        journey.
-                        <br><br>
-                        Our delegate’s experience- both inside and out of committee- is our top priority. Building on
-                        procedures executed during MUNI XXVI, we are continuing to expand our policies and practices to
-                        ensure that we have created an engaging and safe environment for all students. MUNI emphasizes a
-                        range of committee styles and topics to cater to interests of delegates coming from a variety of
-                        backgrounds. Delegates will be urged to think both critically and compassionately while working
-                        with diverse issues that have, and continue, to encapsulate the globe. In line with this
-                        philosophy, our conference holds delegates to be adaptable, collaborative, professional and
-                        respectful while interacting with their fellow committee members. Whether your delegation is
-                        returning or this is our first time hosting you, we can assure you that this conference will be
-                        a rewarding experience for all delegates.
-                        <br><br>
 
-                        We are so excited to see you all in Urbana-Champaign this April 18-19th for MUNI XXVII, and will
-                        be in touch throughout the year to keep you updated! For any questions or concerns, feel free to
-                        contact me directly at <a class="link"
+                    <div class="leading-relaxed">
+                        On behalf of the Illinois Model UN Secretariat and Executive Board, it is my great pleasure
+                        to welcome you to the 28th iteration of Model United Nations at Illinois: MUNI
+                        XXVIII! Since its founding in 1995, MUNI has grown into a leading conference in
+                        the Midwest known for providing a professional, enriching, and unforgettable delegate
+                        experience—hosted at our historic campus in Champaign, IL.
+                        <br><br>
+                        Building on the successes of MUNI XXVII, which marked our third successful post-pandemic
+                        conference and was led by Secretary-General Nafisa Khan, we are proud to continue this
+                        legacy of innovation and excellence. With overwhelming positive feedback from advisors and
+                        delegates and
+                        the introduction of new styles of committees, MUNI XXVII will serve as a model for our
+                        upcoming conference.
+                        <br><br>
+                        Whether this is your first or tenth conference, MUNI is designed to be a meaningful learning
+                        experience. First-time delegates will be supported through frequent feedback sessions and
+                        consistent support from our friendly staff, while seasoned delegates will be challenged
+                        through complex and dynamic committee structures and topics. By the end of the conference,
+                        every delegate will take home a new perspective on communicating, compromising, and
+                        collaborating—skills critical for solving global issues.
+                        <br><br>
+                        Providing an exciting, safe, and impactful delegate experience is our top priority at MUNI.
+                        Through our well thought-out committees, year-long trained staff, and extensive delegate
+                        resources, MUNI aims to encourage students to step outside their comfort zones, embrace
+                        diplomacy, and grow as global citizens. From writing resolutions to speaking on the floor,
+                        from negotiating tough compromises to respecting diverse perspectives—every aspect of the
+                        Model UN experience is brought to life here at MUNI.
+                        <br><br>
+                        We look forward to welcoming you to our campus and seeing you thrive in committee. If at any
+                        time you have questions, please do not hesitate to contact me at <a class="link"
                             href="mailto:secgen@illinoismun.org">secgen@illinoismun.org</a>.
                         <br><br>
-                        Sincerely,
+                        <strong>Registration opens in August 2025. MUNI XXVIII is tentatively scheduled for April 17-18,
+                            2026. Please feel free to fill out our interest form!</strong>
+                        <br><br>
+                        Warm regards,
                         <br>
-                        <span class="font-bold">Nafisa Khan</span>
+                        <span class="font-bold">Divij Garg</span>
                         <br>
-                        Secretary-General, MUNI XXVII
+                        Secretary-General, MUNI XXVIII
                         <br>
                         <a class="link" href="mailto:secgen@illinoismun.org">secgen@illinoismun.org</a>
-                        <br>
                     </div>
 
                 </div>
@@ -373,21 +376,11 @@
                             <img src="../assets/model-un-logo-white.png" class="h-8 mr-3" />
                             <span
                                 class="self-center text-2xl font-semibold whitespace-nowrap font-serif text-white">MUNI
-                                XXVII</span>
+                                XXVIII</span>
                         </a>
                     </div>
                     <div class="grid grid-cols-2 gap-8 sm:gap-6">
-                        <div>
-                            <h2 class="mb-6 text-sm font-semibold uppercase text-white">Resources</h2>
-                            <ul class="text-gray-400 font-medium">
-                                <li class="mb-4">
-                                    <a href="./about" class="link-foot">About</a>
-                                </li>
-                                <li>
-                                    <a href="./registration" class="link-foot">Registration</a>
-                                </li>
-                            </ul>
-                        </div>
+                        
                         <div>
                             <h2 class="mb-6 text-sm font-semibold uppercase text-white">Contact us</h2>
                             <ul class="text-gray-400 font-medium">
