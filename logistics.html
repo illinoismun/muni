@@ -1,149 +1,214 @@
 <!DOCTYPE html>
 <html lang="en">
 <style>
-    .hover-bounce:hover {
-        animation: bounce 0.5s;
-        text-decoration: underline;
-    }
-
-    .hover-animate:hover {
-        animation: animate 0.5s;
-    }
-
-    @keyframes animate {
-        0% {
-            transform: scale(1);
-        }
-
-        50% {
-            transform: scale(1.1);
-        }
-
-        100% {
-            transform: scale(1);
-        }
-    }
-</style>
-
-<style>
     body {
-        font-family: Arial, sans-serif;
-        background-color: #f4f4f4;
+        font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+        background-color: #ffffff;
         margin: 0;
+        padding: 0;
+        color: #000000;
+        line-height: 1.7;
+    }
+
+    /* Professional section headers */
+    .section-header {
+        font-family: 'Libre Baskerville', serif;
+        font-size: 2.5rem;
+        font-weight: 700;
+        margin: 0 0 0.25rem 0;
+        color: #000000;
+        letter-spacing: -0.02em;
+    }
+
+    .section-divider {
+        height: 1px;
+        background: #000000;
+        border: none;
+        margin: 1.5rem 0 3.5rem 0;
+        width: 100%;
+    }
+
+    /* Day headers */
+    .day-header {
+        font-size: 1.5rem;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 0.08em;
+        color: #000000;
+        margin: 4rem 0 0.5rem 0;
+    }
+
+    .date-header {
+        font-size: 1rem;
+        font-weight: 400;
+        text-transform: uppercase;
+        letter-spacing: 0.1em;
+        color: #666666;
+        margin: 0 0 2.5rem 0;
+    }
+
+    .section-label {
+        font-size: 0.9375rem;
+        font-style: italic;
+        color: #666666;
+        margin: 2.5rem 0 1.25rem 0;
+        font-weight: 400;
+        text-transform: none;
+    }
+
+    /* Professional venue/hotel layout */
+    .venue-item,
+    .hotel-item {
+        margin-bottom: 4rem;
+        border-bottom: 1px solid #e5e5e5;
+        padding-bottom: 3rem;
+    }
+
+    .venue-item:last-child,
+    .hotel-item:last-child {
+        border-bottom: none;
+        margin-bottom: 0;
+        padding-bottom: 0;
+    }
+
+    .venue-grid,
+    .hotel-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 3rem;
+        margin-top: 1.5rem;
+    }
+
+    .venue-image,
+    .hotel-image {
+        width: 100%;
+        height: auto;
+        display: block;
+    }
+
+    .venue-content,
+    .hotel-content {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .venue-content h3,
+    .hotel-content h3 {
+        font-family: 'Libre Baskerville', serif;
+        font-size: 1.75rem;
+        font-weight: 700;
+        margin: 0 0 1rem 0;
+        color: #000000;
+        letter-spacing: -0.01em;
+        line-height: 1.3;
+    }
+
+    .hotel-content .subtitle {
+        font-size: 0.8125rem;
+        font-weight: 400;
+        text-transform: uppercase;
+        letter-spacing: 0.1em;
+        color: #666666;
+        margin: 0 0 1.5rem 0;
+    }
+
+    .venue-content ul,
+    .hotel-content ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    .venue-content li,
+    .hotel-content li {
+        margin-bottom: 0.875rem;
+        padding-left: 0;
+    }
+
+    .venue-content .link,
+    .hotel-content .link {
+        color: #000000;
+        text-decoration: none;
+        font-weight: 400;
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5rem;
+        border-bottom: 1px solid #000000;
+        transition: opacity 0.2s ease;
+    }
+
+    .venue-content .link:hover,
+    .hotel-content .link:hover {
+        opacity: 0.6;
+    }
+
+    /* Hotel info section */
+    .hotel-info {
+        border-top: 1px solid #000000;
+        border-bottom: 1px solid #000000;
+        padding: 2.5rem 0;
+        margin: 3rem 0 4rem 0;
+    }
+
+    .hotel-info p {
+        color: #000000;
+        font-size: 1rem;
+        line-height: 1.8;
+        margin-bottom: 1.5rem;
+        font-weight: 400;
+    }
+
+    .hotel-info p:last-child {
+        margin-bottom: 0;
+    }
+
+    .hotel-info ul {
+        margin: 1.5rem 0 0 1.5rem;
+        color: #000000;
         padding: 0;
     }
 
-    .timeline {
-        width: 100%;
-        max-width: 900px;
-        margin: 0 auto;
-        position: relative;
-        padding: 20px 0;
+    .hotel-info li {
+        margin-bottom: 0.875rem;
+        line-height: 1.7;
     }
 
-    .timeline-item {
-        display: flex;
-        padding: 20px 0;
-        border-top: 1px solid #ccc;
-        position: relative;
+    .hotel-info b {
+        color: #000000;
+        font-weight: 600;
     }
 
-    .timeline-item:not(:last-child) {
-        border-bottom: 1px solid #ccc;
+    .hotel-info .link {
+        color: #000000;
+        text-decoration: none;
+        font-weight: 400;
+        border-bottom: 1px solid #000000;
+        transition: opacity 0.2s ease;
     }
 
-    .timeline-left,
-    .timeline-right {
-        position: relative;
-        padding: 0 20px;
+    .hotel-info .link:hover {
+        opacity: 0.6;
     }
 
-    .timeline-left {
-        width: 25%;
-        /* text-align: center; */
-        display: flex;
-        /* align-items: center; */
-        /* justify-content: center; */
-    }
-
-    .timeline-right {
-        width: 50%;
-        text-align: left;
-        margin-left: 10%;
-        /* Increase margin to avoid overlap */
-    }
-
-    .timeline-left h1,
-    .timeline-right h1 {
-        margin: 0;
-        font-family: 'Georgia', serif;
-        font-size: 2em;
-        color: #333;
-    }
-
-    .timeline-right p,
-    .timeline-left p {
-        margin: 0;
-        font-family: 'Helvetica', sans-serif;
-        font-weight: 300;
-        font-size: 1.1em;
-        padding-top: 10px;
-        color: #555;
-    }
-
-    .timeline-item::before {
-        content: '';
-        position: absolute;
-        top: 0;
-        bottom: 0;
-        left: 35%;
-        /* Adjust the line position */
-        width: 2px;
-        background: #ccc;
-    }
-
-    .timeline-item::after {
-        content: '';
-        position: absolute;
-        top: 20px;
-        left: calc(35% - 5px);
-        /* Adjust the circle position */
-        width: 10px;
-        height: 10px;
-        border-radius: 50%;
-        background: #333;
-        z-index: 1;
-    }
-
+    /* Responsive design */
     @media (max-width: 768px) {
-        .timeline-item {
-            flex-direction: column;
-            padding: 15px 0;
+        .section-header {
+            font-size: 2rem;
         }
 
-        .timeline-left,
-        .timeline-right {
-            width: 100%;
-            text-align: left;
-            padding: 10px 0;
+        .venue-grid,
+        .hotel-grid {
+            grid-template-columns: 1fr;
+            gap: 2rem;
         }
 
-        .timeline-left {
-            padding-right: 0;
+        .venue-content h3,
+        .hotel-content h3 {
+            font-size: 1.5rem;
         }
 
-        .timeline-right {
-            padding-left: 0;
-        }
-
-        .timeline-item::before {
-            left: 20px;
-            width: 2px;
-            height: 100%;
-        }
-
-        .timeline-item::after {
-            left: 15px;
+        .day-header {
+            margin-top: 3rem;
         }
     }
 </style>
@@ -283,30 +348,21 @@
             <img class="fixed brightness-50 w-full  object-cover object-top h-fill" src="../assets/quad.jpeg"></img>
         </section>
         <!-- END NAVIGATION -->
-        <section class="w-full z-20 bg-white h-full">
-            <div class="max-w-4xl px-16 md:px-0 mx-auto pb-20">
-                <!-- <h1 class="pt-24 text-4xl font-serif font-bold">Conference Venues</h1>
-                <div class="leading-relaxed py-4">
-                    All committees will take place in the same building on the UIUC campus.
-                </div>
-                <hr class="my-4 border-gray-400" />
+        <section class="w-full z-20 bg-white h-full" style="background-color: #ffffff;">
+            <div class="max-w-5xl px-6 md:px-8 mx-auto pb-20 pt-24">
+                <h1 class="section-header">Conference Venues</h1>
+                <hr class="section-divider" />
 
-                <div class="text-3xl mb-4 mt-10 uppercase font-semibold tracking-wide">Day 1
-                </div>
-                <div class="text-2xl mb-4  uppercase font-light tracking-wide">Friday, April 18, 2025
-                </div>
-                <div class="italic text-lg mb-4 mt-10 tracking-wide">
-                    Opening Ceremony
-                </div>
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-10 py-4">
-                    <div class="mb-6 md:mb-0">
-                        <img src="../assets/armory.jpg">
-                    </div>
-
-                    <div class="md:pl-10 relative flex flex-col justify-between h-full">
-                        <div class="text-3xl uppercase font-light tracking-wide">Armory 101</div>
-                        <div class="leading-relaxed">
-                            <ul class="list-disc list-inside" style="line-height: 1.8;">
+                <div class="day-header">Day 1</div>
+                <div class="date-header">Friday, April 24, 2026</div>
+                
+                <div class="section-label">Opening Ceremony</div>
+                <div class="venue-item">
+                    <div class="venue-grid">
+                        <img src="../assets/armory.jpg" alt="Armory 101" class="venue-image">
+                        <div class="venue-content">
+                            <h3>Armory 101</h3>
+                            <ul>
                                 <li>
                                     <a class="link"
                                         href="https://facilityaccessmaps.fs.illinois.edu/archibus/schema/ab-products/essential/workplace/index.html?blId=0006&flId=01">
@@ -328,25 +384,17 @@
                                     </a>
                                 </li>
                             </ul>
-                            <br><br><br>
                         </div>
                     </div>
-
-
                 </div>
 
-                <div class="italic text-lg mb-4 mt-10 tracking-wide">
-                    Committees
-                </div>
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-10 py-4">
-                    <div class="mb-6 md:mb-0">
-                        <img src="../assets/dkh.jpg" style="width: 100%; height: auto;">
-                    </div>
-
-                    <div class="md:pl-10 relative flex flex-col justify-between h-full">
-                        <div class="text-3xl uppercase font-light tracking-wide">David Kinley Hall</div>
-                        <div class="leading-relaxed">
-                            <ul class="list-disc list-inside" style="line-height: 1.8;">
+                <div class="section-label">Committees</div>
+                <div class="venue-item">
+                    <div class="venue-grid">
+                        <img src="../assets/dkh.jpg" alt="David Kinley Hall" class="venue-image">
+                        <div class="venue-content">
+                            <h3>David Kinley Hall</h3>
+                            <ul>
                                 <li>
                                     <a class="link"
                                         href="https://www.google.com/search?q=david+kinley+hall+uiuc+floor+plan&sca_esv=6fe806cc0ee527f3&rlz=1C5CHFA_enTW1017US1026&ei=V_K0Z-LNDJClptQP8-OSwAI&oq=david+kinley+hall+uiuc+&gs_lp=Egxnd3Mtd2l6LXNlcnAiF2RhdmlkIGtpbmxleSBoYWxsIHVpdWMgKgIIADIFEAAYgAQyBhAAGBYYHjIGEAAYFhgeMgYQABgWGB4yAhAmMgIQJjIIEAAYgAQYogRIiglQiQNYiQNwAXgAkAEAmAFfoAGVAaoBATK4AQPIAQD4AQGYAgKgAmTCAgoQABiwAxjWBBhHwgINEAAYgAQYsAMYQxiKBZgDAIgGAZAGCZIHATKgB6kK&sclient=gws-wiz-serp#:~:text=basement%20plan,uploads%20%E2%80%BA%20floor%2Dplans">
@@ -368,19 +416,10 @@
                                     </a>
                                 </li>
                             </ul>
-                            <br><br><br>
                         </div>
-                         <div class="absolute bottom-0 right-0">
-                            <a class="link" href="https://maps.app.goo.gl/X1kWbqSebLc76uqeA">
-                                Open in Google Maps
-                                <i class="fa-solid fa-arrow-up-right-from-square text-sm"></i>
-                            </a>
-                        </div> 
                     </div>
-
-
                 </div>
-
+                <!-- 
                 <div class="text-lg mb-4 mt-10 uppercase font-light tracking-wide">Room Assignments</div>
                 <table class="table-auto border-collapse border border-gray-400 w-full mb-10 md:w-3/4 text-left">
                     <thead>
@@ -420,34 +459,16 @@
                         </tr>
                     </tbody>
                 </table>
-
-                <div class="text-3xl mb-4 mt-10 uppercase font-semibold tracking-wide">Day 2
-                </div>
-                <div class="text-2xl mb-4  uppercase font-light tracking-wide">Saturday, April 19, 2025
-                </div>
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-10 py-4">
-                    <div class="mb-6 md:mb-0">
-                        <img src="../assets/lincoln.jpg">
-                    </div>
-
-                    <div class="md:pl-10 relative flex flex-col justify-between h-full">
-                        <div class="text-3xl uppercase font-light tracking-wide">Lincoln Hall</div>
-                        <div class="text-3xl mb-4 uppercase font-light tracking-wide">
-                            <a class="link" href="https://maps.app.goo.gl/X1kWbqSebLc76uqeA">
-                                Lincoln Hall 
-                                <i class="fa-solid fa-arrow-up-right-from-square text-sm"></i>
-                            </a>
-                        </div> 
-
-                      <div class="leading-relaxed">
-                            <br><br><br><br><br>
-                        </div>
-                        <div class="leading-relaxed">
-                            <a class="link" href="https://las.illinois.edu/about/lincolnhallmap">Floor Plan</a>
-                            <br><br><br><br><br><br>
-                        </div> 
-                        <div class="leading-relaxed">
-                            <ul class="list-disc list-inside" style="line-height: 1.8;">
+ -->
+                <div class="day-header">Day 2</div>
+                <div class="date-header">Saturday, April 25, 2026</div>
+                
+                <div class="venue-item">
+                    <div class="venue-grid">
+                        <img src="../assets/lincoln.jpg" alt="Lincoln Hall" class="venue-image">
+                        <div class="venue-content">
+                            <h3>Lincoln Hall</h3>
+                            <ul>
                                 <li>
                                     <a class="link" href="https://las.illinois.edu/about/lincolnhallmap">
                                         Floor Plan
@@ -468,18 +489,12 @@
                                     </a>
                                 </li>
                             </ul>
-                            <br><br><br>
                         </div>
-                      <div class="absolute bottom-0 right-0">
-                            <a class="link" href="https://maps.app.goo.gl/X1kWbqSebLc76uqeA">
-                                Open in Google Maps
-                                <i class="fa-solid fa-arrow-up-right-from-square text-sm"></i>
-                            </a>
-                        </div> 
                     </div>
                 </div>
-                <div class="text-lg mb-4 mt-10 uppercase font-light tracking-wide">Room Assignments</div>
-                <table class="table-auto border-collapse border border-gray-400 w-full mb-10 md:w-3/4 text-left">
+                <!-- </div> -->
+                <!-- <div class="text-lg mb-4 mt-10 uppercase font-light tracking-wide">Room Assignments</div> -->
+                <!-- <table class="table-auto border-collapse border border-gray-400 w-full mb-10 md:w-3/4 text-left">
                     <thead>
                         <tr>
                             <th class="border border-gray-400 px-4 py-2">Committee</th>
@@ -520,214 +535,151 @@
                             <td class="border border-gray-400 px-4 py-2">Lincoln 1090</td>
                         </tr>
                     </tbody>
-                </table>
-                <hr class="my-10 sm:mx-auto border-gray-700 lg:my-8" /> -->
-                <h1 class="pt-8 text-3xl font-serif font-bold">Hotel Accomodations</h1>
-                <div class="leading-relaxed py-4">
-                    We encourage all conference participants to book accommodations at one of our preferred hotels,
-                    which will be announced soon, where discounted rates
-                    are available. The hotels will have easy access to the campus-wide bus network. <b>Exclusive group
+                </table> -->
+                <h1 class="section-header pt-12">Hotel Accommodations</h1>
+                <!-- <hr class="section-divider" /> -->
+
+                <div class="hotel-info">
+                    <p>
+                        We encourage all conference participants to book accommodations at one of our preferred hotels,
+                        which will be announced soon, where discounted rates are available. The hotels will have easy access to the campus-wide bus network. <b>Exclusive group
                         booking links and discount codes will be sent directly to all
                         registered delegations to access these special rates.</b>
-                    <br><br>
-                    Please note that
-                    <div class="ml-8">
-                        <ul class="list-disc list-inside">
-                            <li><b>All delegates must be housed with their advisors.</b></li>
-                            <li>Each delegation is responsible for <b>making its room reservations directly with the
-                                    hotels</b>.</li>
-                            <!-- <li>Room availability is limited and will be assigned on a first-come, first-served basis. It is not guaranteed that delagations will secure their preferred accommodation.</li> -->
-                            <li><b>Discounted room availability is limited</b> and will be assigned on a first-come,
-                                first-served basis. Delegations may not be able to secure their preferred accommodation.
-                            </li>
-                        </ul>
-                    </div>
-                    <br><br>
-                    For any questions or assistance regarding hotel accommodation, please contact MUNI XXVIII's USG of
-                    Logistics at <a class="link" href="mailto:logistics@illinoismun.org">logistics@illinoismun.org</a>.
+                    </p>
+                    <p>Please note that:</p>
+                    <ul>
+                        <li><b>All delegates must be housed with their advisors.</b></li>
+                        <li>Each delegation is responsible for <b>making its room reservations directly with the
+                                hotels</b>.</li>
+                        <li><b>Discounted room availability is limited</b> and will be assigned on a first-come,
+                            first-served basis. Delegations may not be able to secure their preferred accommodation.
+                        </li>
+                    </ul>
+                    <p>
+                        For any questions or assistance regarding hotel accommodation, please contact MUNI XXVIII's USG of
+                        Logistics at <a class="link" href="mailto:logistics@illinoismun.org">logistics@illinoismun.org</a>.
+                    </p>
                 </div>
-                <!-- <div class="grid grid-cols-1 md:grid-cols-2 gap-10 py-4">
-                    <div class="mb-6 md:mb-0">
-                        <img src="../assets/hyatt1.jpeg">
-                    </div>
-                    <div class="md:pl-10 relative flex flex-col justify-between h-full">
-                        <div class="text-3xl mb-4 uppercase font-light tracking-wide">Hyatt Place Champaign/Urbana</div>
-                        <div class="text-lg mb-4 uppercase font-light tracking-wide">Recommended for schools
-                            <br>traveling with Amtrak
-                        </div>
-                        <div class="leading-relaxed">
-                            <ul class="list-disc list-inside" style="line-height: 1.8;">
+
+                <div class="hotel-item">
+                    <div class="hotel-grid">
+                        <img src="../assets/hampton.avif" alt="Hampton Inn Champaign/Urbana" class="hotel-image">
+                        <div class="hotel-content">
+                            <h3>Hampton Inn Champaign/Urbana</h3>
+                            <div class="subtitle">Recommended for schools traveling with Amtrak</div>
+                            <ul>
                                 <li>
                                     <a class="link"
-                                        href="https://www.hyatt.com/hyatt-place/en-US/cmizc-hyatt-place-champaign-urbana?src=agn_koddi_crp_chico_ppc_22061088478_Conversion_Place_Google_Search_English_CMIZC_Champaign_Paid_Brand_CrossDevice_1x1_google_Koddi-TopUp-Evergreen-Brand_e_hyatt%20place%20champaign&gad_source=1&gclid=CjwKCAiAnpy9BhAkEiwA-P8N4gq4iU209nA8o2DyR8QhTvJnXuV0zsLwRdA3JAWFbiq3NBFvJS0QmRoCYLEQAvD_BwE">
+                                        href="https://www.hilton.com/en/hotels/cmiilhx-hampton-champaign-urbana/">
                                         Website
                                         <i class="fa-solid fa-arrow-up-right-from-square text-sm"></i>
                                     </a>
                                 </li>
-                                 <li>
-                                    <a class="link" href="https://www.hyatt.com/shop/rooms/cmizc?checkinDate=2025-04-18&checkoutDate=2025-04-20&rooms=1&adults=1&kids=0&corp_id=G-MUNI&accessibilityCheck=false">
-                                        MUNI XXVII Exclusive Hotel Booking - Hyatt
-                                        <i class="fa-solid fa-arrow-up-right-from-square text-sm"></i>
-                                    </a>
-                                </li> -->
-                <!-- <li>
-                                    <a class="link" href="https://mtd.org/maps-and-schedules/uiuc-learn-to-ride/interactive-map/">
+                                <li>
+                                    <a class="link"
+                                        href="https://mtd.org/maps-and-schedules/uiuc-learn-to-ride/interactive-map/">
                                         MTD Bus Interactive Map
                                         <i class="fa-solid fa-arrow-up-right-from-square text-sm"></i>
                                     </a>
-                                </li> 
+                                </li>
                                 <li>
-                                    <a class="link" href="https://maps.app.goo.gl/oTTsVFgiShZMfvQ4A">
+                                    <a class="link" href="https://maps.app.goo.gl/BD8hrNvdmjY8YtRw9">
                                         Open in Google Maps
                                         <i class="fa-solid fa-arrow-up-right-from-square text-sm"></i>
                                     </a>
                                 </li>
                             </ul>
-                            <br><br><br>
                         </div>
-                        <div class="leading-relaxed">
-                            <br><br><br><br>
-                        </div>
-                        <a class="link" href="https://maps.app.goo.gl/oTTsVFgiShZMfvQ4A">
-                            Open in Google Maps 
-                            <i class="fa-solid fa-arrow-up-right-from-square"></i>
-                        </a> 
-                      <div class="leading-relaxed">
-                            <br><br><br><br><br>
-                        </div>
-                        <div class="absolute bottom-0 right-0">
-                            <a class="link" href="https://maps.app.goo.gl/oTTsVFgiShZMfvQ4A">
-                                Open in Google Maps 
-                                <i class="fa-solid fa-arrow-up-right-from-square"></i>
-                            </a>
-                        </div> 
                     </div>
                 </div>
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-10 py-4">
-                    <div class="mb-6 md:mb-0">
-                        <img src="../assets/hilton1.jpeg">
-                    </div>
-                    <div class="md:pl-10 relative flex flex-col justify-between h-full">
-                        <div class="text-3xl mb-4 uppercase font-light tracking-wide">Homewood Suites by Hilton
-                            Champaign-Urbana</div>
-                        <div class="text-lg mb-4 uppercase font-light tracking-wide">Recommended for schools
-                            <br>requiring parking
-                        </div>
-                     <div class="md:pl-10 relative flex flex-col justify-between h-full">
-                        <div class="leading-relaxed">
-                            <ul class="list-disc list-inside" style="line-height: 1.8;">
+
+                <div class="hotel-item">
+                    <div class="hotel-grid">
+                        <img src="../assets/holiday.avif" alt="Holiday Inn Express & Suites" class="hotel-image">
+                        <div class="hotel-content">
+                            <h3>Holiday Inn Express & Suites<br>Urbana-Champaign (U of I Area)</h3>
+                            <ul>
                                 <li>
                                     <a class="link"
-                                        href="https://www.guestreservations.com/hilton-garden-inn-champaign-urbana/booking?utm_source=google&utm_medium=cpc&utm_campaign=973003610&gad_source=1&gclid=CjwKCAiAnpy9BhAkEiwA-P8N4hJYn2Dm6DOVNsAJHtOHEK5wh1qkzTQXl0nEY5ex4cn93XozYMToKxoC54EQAvD_BwE">
+                                        href="https://www.ihg.com/holidayinnexpress/hotels/us/en/urbana/cmiil/hoteldetail">
                                         Website
                                         <i class="fa-solid fa-arrow-up-right-from-square text-sm"></i>
                                     </a>
                                 </li>
-                              <li>
-                                    <a class="link" href="https://google.com">
-                                        MUNI XXVII Exclusive Hotel Booking - Hilton
+                                <li>
+                                    <a class="link"
+                                        href="https://mtd.org/maps-and-schedules/uiuc-learn-to-ride/interactive-map/">
+                                        MTD Bus Interactive Map
                                         <i class="fa-solid fa-arrow-up-right-from-square text-sm"></i>
                                     </a>
-                                </li> 
+                                </li>
                                 <li>
-                                    <a class="link" href="https://maps.app.goo.gl/oTTsVFgiShZMfvQ4A">
+                                    <a class="link" href="https://maps.app.goo.gl/PrVH5PFxr2ZZCBDK9">
                                         Open in Google Maps
                                         <i class="fa-solid fa-arrow-up-right-from-square text-sm"></i>
                                     </a>
                                 </li>
                             </ul>
-                            <br><br><br>
                         </div>
-                      <div class="leading-relaxed">
-                                <br><br><br><br>
-                            </div>
-                            <a class="link" href="https://maps.app.goo.gl/oTTsVFgiShZMfvQ4A">
-                                Open in Google Maps 
-                                <i class="fa-solid fa-arrow-up-right-from-square"></i>
-                            </a> -->
-                <!-- <div class="leading-relaxed">
-                                <br><br><br><br><br>
-                            </div>
-                            <div class="absolute bottom-0 right-0">
-                                <a class="link" href="https://maps.app.goo.gl/oTTsVFgiShZMfvQ4A">
-                                    Open in Google Maps 
-                                    <i class="fa-solid fa-arrow-up-right-from-square"></i>
-                                </a>
-                            </div> 
-                    </div> -->
-                <!-- <div class="leading-relaxed">
-                            <br><br><br><br>
-                        </div>
-                        <a class="link" href="https://maps.app.goo.gl/p8a1CKWvzB4PYCCj9">
-                            Open in Google Maps 
-                            <i class="fa-solid fa-arrow-up-right-from-square"></i>
-                        </a> -->
-                <!-- <div class="leading-relaxed">
-                            <br><br><br><br><br>
-                        </div>
-                        <div class="absolute bottom-0 right-0">
-                            <a class="link" href="https://maps.app.goo.gl/p8a1CKWvzB4PYCCj9">
-                                Open in Google Maps 
-                                <i class="fa-solid fa-arrow-up-right-from-square"></i>
-                            </a>
-                        </div> -->
-            </div>
-    </div>
-    </div>
-    </section>
-    <!-- START FOOTER -->
-    <footer class="bg-gray-900">
-        <div class="mx-auto w-full max-w-5xl p-4 px-12 md:px-0 py-6 md:py-16">
-            <div class="md:flex md:justify-between">
-                <div class="mb-6 md:mb-0">
-                    <a href="./" class="flex items-center">
-                        <img src="../assets/model-un-logo-white.png" class="h-8 mr-3" />
-                        <span class="self-center text-2xl font-semibold whitespace-nowrap font-serif text-white">MUNI
-                            XXVIII</span>
-                    </a>
-                </div>
-                <div class="grid grid-cols-2 gap-8 sm:gap-6">
-
-                    <div>
-                        <h2 class="mb-6 text-sm font-semibold uppercase text-white">Contact us</h2>
-                        <ul class="text-gray-400 font-medium">
-                            <li class="mb-4">
-                                <a href="mailto:secgen@illinoismun.org" class="link-foot ">Sec-Gen</a>
-                            </li>
-                            <li>
-                                <a href="mailto:logistics@illinoismun.org" class="link-foot">Logistics</a>
-                            </li>
-                        </ul>
                     </div>
-
                 </div>
             </div>
-            <hr class="my-6 sm:mx-auto border-gray-700 lg:my-8" />
-            <div class="sm:flex sm:items-center sm:justify-between">
-                <span class="text-sm  sm:text-center text-gray-400">© 2025 <a href="./" class="link-foot">Illinois
-                        MUN</a>. All Rights Reserved.
-                </span>
-                <div class="flex mt-4 space-x-5 sm:justify-center sm:mt-0">
-                    <a href="mailto:secgen@illinoismun.org" target="_blank" class="text-gray-500 hover:text-white">
-                        <svg class="w-4 h-4" xmlns="http://www.w3.org/2000/svg" fill="currentColor"
-                            viewBox="0 0 512 512">
-                            <path
-                                d="M48 64C21.5 64 0 85.5 0 112c0 15.1 7.1 29.3 19.2 38.4L236.8 313.6c11.4 8.5 27 8.5 38.4 0L492.8 150.4c12.1-9.1 19.2-23.3 19.2-38.4c0-26.5-21.5-48-48-48H48zM0 176V384c0 35.3 28.7 64 64 64H448c35.3 0 64-28.7 64-64V176L294.4 339.2c-22.8 17.1-54 17.1-76.8 0L0 176z" />
-                        </svg>
-                    </a>
-                    <a href="https://www.instagram.com/uiucmun/" target="_blank" class="text-gray-500 hover:text-white">
-                        <svg class="w-4 h-4" xmlns="http://www.w3.org/2000/svg" fill="currentColor"
-                            viewBox="0 0 448 512">
-                            <path
-                                d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z" />
-                        </svg>
-                    </a>
+        </section>
+        <!-- START FOOTER -->
+        <footer class="bg-gray-900">
+            <div class="mx-auto w-full max-w-5xl p-4 px-12 md:px-0 py-6 md:py-16">
+                <div class="md:flex md:justify-between">
+                    <div class="mb-6 md:mb-0">
+                        <a href="./" class="flex items-center">
+                            <img src="../assets/model-un-logo-white.png" class="h-8 mr-3" />
+                            <span
+                                class="self-center text-2xl font-semibold whitespace-nowrap font-serif text-white">MUNI
+                                XXVIII</span>
+                        </a>
+                    </div>
+                    <div class="grid grid-cols-2 gap-8 sm:gap-6">
 
+                        <div>
+                            <h2 class="mb-6 text-sm font-semibold uppercase text-white">Contact us</h2>
+                            <ul class="text-gray-400 font-medium">
+                                <li class="mb-4">
+                                    <a href="mailto:secgen@illinoismun.org" class="link-foot ">Sec-Gen</a>
+                                </li>
+                                <li>
+                                    <a href="mailto:logistics@illinoismun.org" class="link-foot">Logistics</a>
+                                </li>
+                            </ul>
+                        </div>
+
+                    </div>
+                </div>
+                <hr class="my-6 sm:mx-auto border-gray-700 lg:my-8" />
+                <div class="sm:flex sm:items-center sm:justify-between">
+                    <span class="text-sm  sm:text-center text-gray-400">© 2026 <a href="./" class="link-foot">Illinois
+                            MUN</a>. All Rights Reserved.
+                    </span>
+                    <div class="flex mt-4 space-x-5 sm:justify-center sm:mt-0">
+                        <a href="mailto:secgen@illinoismun.org" target="_blank" class="text-gray-500 hover:text-white">
+                            <svg class="w-4 h-4" xmlns="http://www.w3.org/2000/svg" fill="currentColor"
+                                viewBox="0 0 512 512">
+                                <path
+                                    d="M48 64C21.5 64 0 85.5 0 112c0 15.1 7.1 29.3 19.2 38.4L236.8 313.6c11.4 8.5 27 8.5 38.4 0L492.8 150.4c12.1-9.1 19.2-23.3 19.2-38.4c0-26.5-21.5-48-48-48H48zM0 176V384c0 35.3 28.7 64 64 64H448c35.3 0 64-28.7 64-64V176L294.4 339.2c-22.8 17.1-54 17.1-76.8 0L0 176z" />
+                            </svg>
+                        </a>
+                        <a href="https://www.instagram.com/uiucmun/" target="_blank"
+                            class="text-gray-500 hover:text-white">
+                            <svg class="w-4 h-4" xmlns="http://www.w3.org/2000/svg" fill="currentColor"
+                                viewBox="0 0 448 512">
+                                <path
+                                    d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z" />
+                            </svg>
+                        </a>
+
+                    </div>
                 </div>
             </div>
-        </div>
-    </footer>
-    <!-- END FOOTER -->
+        </footer>
+        <!-- END FOOTER -->
     </div>
     <script>
         function showDiv() {
