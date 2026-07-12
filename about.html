@@ -26,17 +26,6 @@
 
 <body>
     <script>
-        function showDiv() {
-            const sidenav = document.getElementById('sidenav');
-            sidenav.style.right = '0'; // Show the sidenav
-        }
-
-        function hideDiv() {
-            const sidenav = document.getElementById('sidenav');
-            sidenav.style.right = '-300px'; // Hide the sidenav
-        }
-    </script>
-    <script>
         // Check if the user is on a mobile device
         function isMobile() {
             return /Mobi|Android|iPhone|iPad|iPod|Windows Phone/i.test(navigator.userAgent);
@@ -56,24 +45,6 @@
                 link.setAttribute('href', googleMapsUrl);
             }
         });
-
-        // Function to toggle the submenu under "About"
-        function toggleSubmenu() {
-            var submenu = document.getElementById("about-submenu");
-            submenu.classList.toggle("hidden");
-        }
-        function toggleIMUNSubmenu() {
-            var submenu = document.getElementById("imun-submenu");
-            submenu.classList.toggle("hidden");
-        }
-        function toggleMUNISubmenu() {
-            var submenu = document.getElementById("muni-submenu");
-            submenu.classList.toggle("hidden");
-        }
-        function toggleSubmenu(submenuId) {
-            const submenu = document.getElementById(submenuId);
-            submenu.classList.toggle('hidden');
-        }
     </script>
     <div class="relative">
         <section
@@ -107,57 +78,6 @@
         </section> -->
         <!-- END NAVIGATION -->
 
-
-        <script>
-            function showDiv() {
-                const sidenav = document.getElementById('sidenav');
-                sidenav.style.right = '0'; // Show the sidenav
-            }
-
-            function hideDiv() {
-                const sidenav = document.getElementById('sidenav');
-                sidenav.style.right = '-300px'; // Hide the sidenav
-            }
-        </script>
-        <script>
-            // Check if the user is on a mobile device
-            function isMobile() {
-                return /Mobi|Android|iPhone|iPad|iPod|Windows Phone/i.test(navigator.userAgent);
-            }
-
-            // Modify the link based on the device type
-            document.addEventListener('DOMContentLoaded', function () {
-                const link = document.getElementById('google-maps-link');
-                const googleMapsUrl = 'https://maps.app.goo.gl/X1kWbqSebLc76uqeA';
-                const mobileUrl = 'google.navigation:q=X1kWbqSebLc76uqeA'; // This is for Android/iOS devices, opens Google Maps app.
-
-                if (isMobile()) {
-                    // For mobile devices, attempt to open the Google Maps app
-                    link.setAttribute('href', mobileUrl);
-                } else {
-                    // For desktop/laptop, keep the link to the web version
-                    link.setAttribute('href', googleMapsUrl);
-                }
-            });
-
-            // Function to toggle the submenu under "About"
-            function toggleSubmenu() {
-                var submenu = document.getElementById("about-submenu");
-                submenu.classList.toggle("hidden");
-            }
-            function toggleIMUNSubmenu() {
-                var submenu = document.getElementById("imun-submenu");
-                submenu.classList.toggle("hidden");
-            }
-            function toggleMUNISubmenu() {
-                var submenu = document.getElementById("muni-submenu");
-                submenu.classList.toggle("hidden");
-            }
-            function toggleSubmenu(submenuId) {
-                const submenu = document.getElementById(submenuId);
-                submenu.classList.toggle('hidden');
-            }
-        </script>
         <style>
             .custom-image {
                 width: 100%;
@@ -444,17 +364,6 @@
         </div>
     </footer>
     </div>
-    <script>
-        function showDiv() {
-            const sidenav = document.getElementById('sidenav');
-            sidenav.style.right = '0'; // Show the sidenav
-        }
-
-        function hideDiv() {
-            const sidenav = document.getElementById('sidenav');
-            sidenav.style.right = '-300px'; // Hide the sidenav
-        }
-    </script>
     <script src="partials/include.js"></script>
 </body>
 
