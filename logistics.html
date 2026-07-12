@@ -1,229 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
-<style>
-    body {
-        font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-        background-color: #ffffff;
-        margin: 0;
-        padding: 0;
-        color: #000000;
-        line-height: 1.7;
-    }
-
-    /* Professional section headers */
-    .section-header {
-        font-family: 'Libre Baskerville', serif;
-        font-size: 2.5rem;
-        font-weight: 700;
-        margin: 0 0 0.25rem 0;
-        color: #000000;
-        letter-spacing: -0.02em;
-    }
-
-    .section-divider {
-        height: 1px;
-        background: #000000;
-        border: none;
-        margin: 1.5rem 0 3.5rem 0;
-        width: 100%;
-    }
-
-    /* Day headers */
-    .day-header {
-        font-size: 1.5rem;
-        font-weight: 600;
-        text-transform: uppercase;
-        letter-spacing: 0.08em;
-        color: #000000;
-        margin: 4rem 0 0.5rem 0;
-    }
-
-    .date-header {
-        font-size: 1rem;
-        font-weight: 400;
-        text-transform: uppercase;
-        letter-spacing: 0.1em;
-        color: #666666;
-        margin: 0 0 2.5rem 0;
-    }
-
-    .section-label {
-        font-size: 0.9375rem;
-        font-style: italic;
-        color: #666666;
-        margin: 2.5rem 0 1.25rem 0;
-        font-weight: 400;
-        text-transform: none;
-    }
-
-    /* Professional venue/hotel layout */
-    .venue-item,
-    .hotel-item {
-        margin-bottom: 4rem;
-        border-bottom: 1px solid #e5e5e5;
-        padding-bottom: 3rem;
-    }
-
-    .venue-item:last-child,
-    .hotel-item:last-child {
-        border-bottom: none;
-        margin-bottom: 0;
-        padding-bottom: 0;
-    }
-
-    .venue-grid,
-    .hotel-grid {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 3rem;
-        margin-top: 1.5rem;
-    }
-
-    .venue-image,
-    .hotel-image {
-        width: 100%;
-        height: auto;
-        display: block;
-    }
-
-    .venue-content,
-    .hotel-content {
-        display: flex;
-        flex-direction: column;
-    }
-
-    .venue-content h3,
-    .hotel-content h3 {
-        font-family: 'Libre Baskerville', serif;
-        font-size: 1.75rem;
-        font-weight: 700;
-        margin: 0 0 1rem 0;
-        color: #000000;
-        letter-spacing: -0.01em;
-        line-height: 1.3;
-    }
-
-    .hotel-content .subtitle {
-        font-size: 0.8125rem;
-        font-weight: 400;
-        text-transform: uppercase;
-        letter-spacing: 0.1em;
-        color: #666666;
-        margin: 0 0 1.5rem 0;
-    }
-
-    .venue-content ul,
-    .hotel-content ul {
-        list-style: none;
-        padding: 0;
-        margin: 0;
-    }
-
-    .venue-content li,
-    .hotel-content li {
-        margin-bottom: 0.875rem;
-        padding-left: 0;
-    }
-
-    .venue-content .link,
-    .hotel-content .link {
-        color: #000000;
-        text-decoration: none;
-        font-weight: 400;
-        display: inline-flex;
-        align-items: center;
-        gap: 0.5rem;
-        border-bottom: 1px solid #000000;
-        transition: opacity 0.2s ease;
-    }
-
-    .venue-content .link:hover,
-    .hotel-content .link:hover {
-        opacity: 0.6;
-    }
-
-    /* Hotel info section */
-    .hotel-info {
-        border-top: 1px solid #000000;
-        border-bottom: 1px solid #000000;
-        padding: 2.5rem 0;
-        margin: 3rem 0 4rem 0;
-    }
-
-    .hotel-info p {
-        color: #000000;
-        font-size: 1rem;
-        line-height: 1.8;
-        margin-bottom: 1.5rem;
-        font-weight: 400;
-    }
-
-    .hotel-info p:last-child {
-        margin-bottom: 0;
-    }
-
-    .hotel-info ul {
-        margin: 1.5rem 0 0 1.5rem;
-        color: #000000;
-        padding: 0;
-    }
-
-    .hotel-info li {
-        margin-bottom: 0.875rem;
-        line-height: 1.7;
-    }
-
-    .hotel-info b {
-        color: #000000;
-        font-weight: 600;
-    }
-
-    .hotel-info .link {
-        color: #000000;
-        text-decoration: none;
-        font-weight: 400;
-        border-bottom: 1px solid #000000;
-        transition: opacity 0.2s ease;
-    }
-
-    .hotel-info .link:hover {
-        opacity: 0.6;
-    }
-
-    /* Responsive design */
-    @media (max-width: 768px) {
-        .section-header {
-            font-size: 2rem;
-        }
-
-        .venue-grid,
-        .hotel-grid {
-            grid-template-columns: 1fr;
-            gap: 2rem;
-        }
-
-        .venue-content h3,
-        .hotel-content h3 {
-            font-size: 1.5rem;
-        }
-
-        .day-header {
-            margin-top: 3rem;
-        }
-    }
-</style>
-
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>General Assemblies | MUNI XXVII</title>
+    <title>Schedule | MUNI XXIX</title>
     <link rel="apple-touch-icon" sizes="180x180" href="../assets/favicon/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="../assets/favicon/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="../assets/favicon/favicon-16x16.png">
     <link rel="manifest" href="../assets/favicon/site.webmanifest">
     <link rel="stylesheet" href="../dist/style.css">
     <link rel="stylesheet" href="../dist/index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap"
@@ -239,7 +27,6 @@
 <body>
     <div class="relative">
         <!-- START NAVIGATION -->
-
         <div id="full-nav" class="absolute w-full top-0 py-5 z-50 transition ease-linear">
             <div class="max-w-6xl mx-auto px-6">
                 <div class="flex items-center container">
@@ -248,11 +35,8 @@
                     <div class="ml-auto sm:flex text-white font-sans hidden">
 
                         <div class="dropdown ml-8 font-semibold uppercase text-sm">
-                            <a class="title-link ml-8 font-semibold uppercase text-sm">MUNI XXVIII</a>
+                            <a class="title-link ml-8 font-semibold uppercase text-sm">MUNI XXIX</a>
                             <div class="dropdown-menu">
-                                <a class="subtitle-link" href="./about">Meet The Secretariat</a>
-                                <a class="subtitle-link" href="./committees">Committee Introduction</a>
-                                <a class="subtitle-link" href="./schedule">Conference Schedule</a>
                                 <a class="subtitle-link" href="./registration">Registration</a>
                                 <a class="subtitle-link" href="./logistics">Logistics</a>
                             </div>
@@ -264,23 +48,20 @@
                                 <a class="subtitle-link" href="./crisis">Crisis Committees</a>
                             </div>
                         </div>
-
                         <div class="dropdown ml-8 font-semibold uppercase text-sm">
                             <a class="title-link ml-8 font-semibold uppercase text-sm"
                                 href="https://illinoismun.org">Club</a>
 
                         </div>
-                        <!-- <div class="dropdown ml-8 font-semibold uppercase text-sm">
-                            <a class="title-link ml-8 font-semibold uppercase text-sm" href="./sponsor">Sponsorship</a>
-
-                        </div> -->
                         <div class="dropdown ml-8 font-semibold uppercase text-sm">
                             <a class="title-link ml-8 font-semibold uppercase text-sm">Archive</a>
                             <div class="dropdown-menu">
-                                <a class="subtitle-link" href="./muni-xxvi/">MUNI XXVI</a><a class="subtitle-link"
-                                    href="./muni-xxvii/">MUNI XXVII</a>
+                                <a class="subtitle-link" href="./muni-xxvi/">MUNI XXVI</a>
+                                <a class="subtitle-link" href="./muni-xxvii/">MUNI XXVII</a>
+                                <a class="subtitle-link" href="./muni-xxviii/">MUNI XXVIII</a>
 
                             </div>
+
                         </div>
                         <div class="dropdown ml-8 font-semibold uppercase text-sm">
                             <a class="title-link ml-8 font-semibold uppercase text-sm" href="./contact">Contact</a>
@@ -311,15 +92,10 @@
             </div>
             <div class="flex flex-col justify-center items-end font-sans h-full text-white">
                 <a class="font-semibold uppercase text-sm my-4" href="javascript:void(0)"
-                    onclick="toggleSubmenu('muni-submenu')">MUNI XXVIII</a>
+                    onclick="toggleSubmenu('muni-submenu')">MUNI XXIX</a>
                 <div id="muni-submenu" class="submenu hidden pl-4">
-                    <a class="font-semibold uppercase text-sm my-4" href="./about">Meet The Secretariat</a>
-                    <a class="font-semibold uppercase text-sm my-4" href="./committees">Committee Introduction</a>
-                    <a class="font-semibold uppercase text-sm my-4" href="./schedule">Conference Schedule</a>
                     <a class="font-semibold uppercase text-sm my-4" href="./registration">Registration</a>
                     <a class="font-semibold uppercase text-sm my-4" href="./logistics">Logistics</a>
-                    <!-- <a class="font-semibold uppercase text-sm my-4" href="./about">Secretariat</a> -->
-
                 </div>
                 <a class="font-semibold uppercase text-sm my-4" href="javascript:void(0)"
                     onclick="toggleSubmenu('delegate-resources')">Delegate Resources</a>
@@ -337,8 +113,7 @@
 
                     <a class="font-semibold uppercase text-sm my-4" href="./muni-xxvi/">MUNI XXVI</a>
                     <a class="font-semibold uppercase text-sm my-4" href="./muni-xxvii/">MUNI XXVII</a>
-
-
+                    <a class="font-semibold uppercase text-sm my-4" href="./muni-xxviii/">MUNI XXVIII</a>
                 </div>
             </div>
         </div>
@@ -348,302 +123,31 @@
             <img class="fixed brightness-50 w-full  object-cover object-top h-fill" src="../assets/quad.jpeg"></img>
         </section>
         <!-- END NAVIGATION -->
-        <section class="w-full z-20 bg-white h-full" style="background-color: #ffffff;">
-            <div class="max-w-5xl px-6 md:px-8 mx-auto pb-20 pt-24">
-                <h1 class="section-header">Conference Venues</h1>
-                <hr class="section-divider" />
 
-                <div class="day-header">Day 1</div>
-                <div class="date-header">Friday, April 24, 2026</div>
+        <section class="w-full z-20 bg-white h-full">
+            <div class="max-w-4xl px-16 md:px-0 mx-auto pb-20">
 
-                <div class="section-label">Opening Ceremony</div>
-                <div class="venue-item">
-                    <div class="venue-grid">
-                        <img src="../assets/armory.jpg" alt="Armory 101" class="venue-image">
-                        <div class="venue-content">
-                            <h3>Armory 101</h3>
-                            <ul>
-                                <li>
-                                    <a class="link"
-                                        href="https://facilityaccessmaps.fs.illinois.edu/archibus/schema/ab-products/essential/workplace/index.html?blId=0006&flId=01">
-                                        Floor Plan
-                                        <i class="fa-solid fa-arrow-up-right-from-square text-sm"></i>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a class="link"
-                                        href="https://mtd.org/maps-and-schedules/uiuc-learn-to-ride/interactive-map/">
-                                        MTD Bus Interactive Map
-                                        <i class="fa-solid fa-arrow-up-right-from-square text-sm"></i>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a class="link" href="https://maps.app.goo.gl/9rATtbnFZArQcNkU9">
-                                        Open in Google Maps
-                                        <i class="fa-solid fa-arrow-up-right-from-square text-sm"></i>
-                                    </a>
-                                </li>
-                            </ul>
-                        </div>
+                <h1 class="pt-24 text-3xl font-serif font-bold">Hotel Accomodations</h1>
+                <div class="leading-relaxed py-4">
+                    We encourage all conference participants to book accommodations at one of our preferred hotels,
+                    where discounted rates
+                    are available. <b>Exclusive group booking links and discount codes will be sent directly to all
+                        registered delegations to access these special rates.</b>
+                    <br><br>
+                    Please note that
+                    <div class="ml-8">
+                        <ul class="list-disc list-inside">
+                            <li><b>All delegates must be housed with their advisors.</b></li>
+                            <li>Each delegation is responsible for <b>making its room reservations directly with the
+                                    hotels</b>.</li>
+                            <li><b>Discounted room availability is limited</b> and will be assigned on a first-come,
+                                first-served basis. Delegations may not be able to secure their preferred accommodation.
+                            </li>
+                        </ul>
                     </div>
+                    <br><br>
                 </div>
 
-                <div class="section-label">Committees</div>
-                <div class="venue-item">
-                    <div class="venue-grid">
-                        <img src="../assets/dkh.jpg" alt="David Kinley Hall" class="venue-image">
-                        <div class="venue-content">
-                            <h3>David Kinley Hall</h3>
-                            <ul>
-                                <li>
-                                    <a class="link"
-                                        href="https://www.google.com/search?q=david+kinley+hall+uiuc+floor+plan&sca_esv=6fe806cc0ee527f3&rlz=1C5CHFA_enTW1017US1026&ei=V_K0Z-LNDJClptQP8-OSwAI&oq=david+kinley+hall+uiuc+&gs_lp=Egxnd3Mtd2l6LXNlcnAiF2RhdmlkIGtpbmxleSBoYWxsIHVpdWMgKgIIADIFEAAYgAQyBhAAGBYYHjIGEAAYFhgeMgYQABgWGB4yAhAmMgIQJjIIEAAYgAQYogRIiglQiQNYiQNwAXgAkAEAmAFfoAGVAaoBATK4AQPIAQD4AQGYAgKgAmTCAgoQABiwAxjWBBhHwgINEAAYgAQYsAMYQxiKBZgDAIgGAZAGCZIHATKgB6kK&sclient=gws-wiz-serp#:~:text=basement%20plan,uploads%20%E2%80%BA%20floor%2Dplans">
-                                        Floor Plan
-                                        <i class="fa-solid fa-arrow-up-right-from-square text-sm"></i>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a class="link"
-                                        href="https://mtd.org/maps-and-schedules/uiuc-learn-to-ride/interactive-map/">
-                                        MTD Bus Interactive Map
-                                        <i class="fa-solid fa-arrow-up-right-from-square text-sm"></i>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a class="link" href="https://maps.app.goo.gl/zQ2Sf2dsQ8yy41gz8">
-                                        Open in Google Maps
-                                        <i class="fa-solid fa-arrow-up-right-from-square text-sm"></i>
-                                    </a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                 
-                <div class="text-lg mb-4 mt-10 uppercase font-light tracking-wide">Room Assignments</div>
-                <table class="table-auto border-collapse border border-gray-400 w-full mb-10 md:w-3/4 text-left">
-                    <thead>
-                        <tr>
-                            <th class="border border-gray-400 px-4 py-2">Committee</th>
-                            <th class="border border-gray-400 px-4 py-2">Room</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td class="border border-gray-400 px-4 py-2">Ad-Hoc</td>
-                            <td class="border border-gray-400 px-4 py-2">DKH 219</td>
-                        </tr>
-                        <tr>
-                            <td class="border border-gray-400 px-4 py-2">IAEA</td>
-                            <td class="border border-gray-400 px-4 py-2">DKH 115</td>
-                        </tr>
-                        <tr>
-                            <td class="border border-gray-400 px-4 py-2">IMF</td>
-                            <td class="border border-gray-400 px-4 py-2">DKH 113</td>
-                        </tr>
-                        <tr>
-                            <td class="border border-gray-400 px-4 py-2">AU</td>
-                            <td class="border border-gray-400 px-4 py-2">DKH 209</td>
-                        </tr>
-                        <tr>
-                            <td class="border border-gray-400 px-4 py-2">China</td>
-                            <td class="border border-gray-400 px-4 py-2">DKH 222</td>
-                        </tr>
-                        <tr>
-                            <td class="border border-gray-400 px-4 py-2">Mario</td>
-                            <td class="border border-gray-400 px-4 py-2">DKH 223</td>
-                        </tr>
-                        <tr>
-                            <td class="border border-gray-400 px-4 py-2">Advisors</td>
-                            <td class="border border-gray-400 px-4 py-2">DKH 108</td>
-                        </tr>
-                        <tr>
-                            <td class="border border-gray-400 px-4 py-2">Merch </td>
-                            <td class="border border-gray-400 px-4 py-2">DKH 106</td>
-                        </tr>
-                    </tbody>
-                </table>
-
-                <div class="day-header">Day 2</div>
-                <div class="date-header">Saturday, April 25, 2026</div>
-
-                <div class="venue-item">
-                    <div class="venue-grid">
-                        <img src="../assets/lincoln.jpg" alt="Lincoln Hall" class="venue-image">
-                        <div class="venue-content">
-                            <h3>Lincoln Hall</h3>
-                            <ul>
-                                <li>
-                                    <a class="link" href="https://las.illinois.edu/about/lincolnhallmap">
-                                        Floor Plan
-                                        <i class="fa-solid fa-arrow-up-right-from-square text-sm"></i>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a class="link"
-                                        href="https://mtd.org/maps-and-schedules/uiuc-learn-to-ride/interactive-map/">
-                                        MTD Bus Interactive Map
-                                        <i class="fa-solid fa-arrow-up-right-from-square text-sm"></i>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a class="link" href="https://maps.app.goo.gl/X1kWbqSebLc76uqeA">
-                                        Open in Google Maps
-                                        <i class="fa-solid fa-arrow-up-right-from-square text-sm"></i>
-                                    </a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <!-- </div> -->
-             <div class="text-lg mb-4 mt-10 uppercase font-light tracking-wide">Room Assignments</div> -->
-                <table class="table-auto border-collapse border border-gray-400 w-full mb-10 md:w-3/4 text-left">
-                    <thead>
-                        <tr>
-                            <th class="border border-gray-400 px-4 py-2">Committee</th>
-                            <th class="border border-gray-400 px-4 py-2">Room</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td class="border border-gray-400 px-4 py-2">Ad-Hoc</td>
-                            <td class="border border-gray-400 px-4 py-2">Lincoln 1060</td>
-                        </tr>
-                        <tr>
-                            <td class="border border-gray-400 px-4 py-2">IMF</td>
-                            <td class="border border-gray-400 px-4 py-2">Lincoln 1065</td>
-                        </tr>
-                        <tr>
-                            <td class="border border-gray-400 px-4 py-2">IAEA</td>
-                            <td class="border border-gray-400 px-4 py-2">Lincoln 1022</td>
-                        </tr>
-                        <tr>
-                            <td class="border border-gray-400 px-4 py-2">AU</td>
-                            <td class="border border-gray-400 px-4 py-2">Lincoln 1066</td>
-                        </tr>
-                        <tr>
-                            <td class="border border-gray-400 px-4 py-2">Mario</td>
-                            <td class="border border-gray-400 px-4 py-2">Lincoln 1028</td>
-                        </tr>
-                        <tr>
-                            <td class="border border-gray-400 px-4 py-2">China</td>
-                            <td class="border border-gray-400 px-4 py-2">Lincoln 1064</td>
-                        </tr>
-                        <tr>
-                            <td class="border border-gray-400 px-4 py-2">Advisors</td>
-                            <td class="border border-gray-400 px-4 py-2">Lincoln 1057 (Prior to Session 3 Start) Lincoln 1002 (After Session 3 Start)</td>
-                        </tr>
-                        <tr>
-                            <td class="border border-gray-400 px-4 py-2">Merch Store</td>
-                            <td class="border border-gray-400 px-4 py-2">Lincoln 1024</td>
-                        </tr>
-
-                        <tr>
-                            <td class="border border-gray-400 px-4 py-2">GA Training</td>
-                            <td class="border border-gray-400 px-4 py-2">Lincoln 1000</td>
-                        </tr>
-                        <tr>
-                            <td class="border border-gray-400 px-4 py-2">Crisis Training</td>
-                            <td class="border border-gray-400 px-4 py-2">Lincoln 1002</td>
-                        </tr>
-                         <tr>
-                            <td class="border border-gray-400 px-4 py-2">Admissions Training</td>
-                            <td class="border border-gray-400 px-4 py-2">Lincoln 1000</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-                <h1 class="section-header pt-12">Hotel Accommodations</h1>
-                <!-- <hr class="section-divider" /> -->
-
-                <div class="hotel-info">
-                    <p>
-                        We encourage all conference participants to book accommodations at one of our preferred hotels,
-                        where discounted rates are available. The hotels will have easy access to the campus-wide bus
-                        network. <b>Exclusive group
-                            booking links and discount codes will be sent directly to all
-                            registered delegations to access these special rates.</b>
-                    </p>
-                    <p>Please note that:</p>
-                    <ul>
-                        <li><b>All delegates must be housed with their advisors.</b></li>
-                        <li>Each delegation is responsible for <b>making its room reservations directly with the
-                                hotels</b>.</li>
-                        <li><b>Discounted room availability is limited</b> and will be assigned on a first-come,
-                            first-served basis. Delegations may not be able to secure their preferred accommodation.
-                        </li>
-                    </ul>
-                    <p>
-                        For any questions or assistance regarding hotel accommodation, please contact MUNI XXVIII's USG
-                        of
-                        Logistics at <a class="link"
-                            href="mailto:logistics@illinoismun.org">logistics@illinoismun.org</a>.
-                    </p>
-                </div>
-
-                <div class="hotel-item">
-                    <div class="hotel-grid">
-                        <img src="../assets/hampton.avif" alt="Hampton Inn Champaign/Urbana" class="hotel-image">
-                        <div class="hotel-content">
-                            <h3>Hampton Inn Champaign/Urbana</h3>
-                            <div class="subtitle">Recommended for schools traveling with Amtrak</div>
-                            <ul>
-                                <li>
-                                    <a class="link"
-                                        href="https://www.hilton.com/en/hotels/cmiilhx-hampton-champaign-urbana/">
-                                        Website
-                                        <i class="fa-solid fa-arrow-up-right-from-square text-sm"></i>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a class="link"
-                                        href="https://mtd.org/maps-and-schedules/uiuc-learn-to-ride/interactive-map/">
-                                        MTD Bus Interactive Map
-                                        <i class="fa-solid fa-arrow-up-right-from-square text-sm"></i>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a class="link" href="https://maps.app.goo.gl/BD8hrNvdmjY8YtRw9">
-                                        Open in Google Maps
-                                        <i class="fa-solid fa-arrow-up-right-from-square text-sm"></i>
-                                    </a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="hotel-item">
-                    <div class="hotel-grid">
-                        <img src="../assets/holiday.avif" alt="Holiday Inn Express & Suites" class="hotel-image">
-                        <div class="hotel-content">
-                            <h3>Holiday Inn Express & Suites<br>Urbana-Champaign (U of I Area)</h3>
-                            <ul>
-                                <li>
-                                    <a class="link"
-                                        href="https://www.ihg.com/holidayinnexpress/hotels/us/en/urbana/cmiil/hoteldetail">
-                                        Website
-                                        <i class="fa-solid fa-arrow-up-right-from-square text-sm"></i>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a class="link"
-                                        href="https://mtd.org/maps-and-schedules/uiuc-learn-to-ride/interactive-map/">
-                                        MTD Bus Interactive Map
-                                        <i class="fa-solid fa-arrow-up-right-from-square text-sm"></i>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a class="link" href="https://maps.app.goo.gl/PrVH5PFxr2ZZCBDK9">
-                                        Open in Google Maps
-                                        <i class="fa-solid fa-arrow-up-right-from-square text-sm"></i>
-                                    </a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
             </div>
         </section>
         <!-- START FOOTER -->
@@ -655,11 +159,21 @@
                             <img src="../assets/model-un-logo-white.png" class="h-8 mr-3" />
                             <span
                                 class="self-center text-2xl font-semibold whitespace-nowrap font-serif text-white">MUNI
-                                XXVIII</span>
+                                XXIX</span>
                         </a>
                     </div>
                     <div class="grid grid-cols-2 gap-8 sm:gap-6">
-
+                        <div>
+                            <h2 class="mb-6 text-sm font-semibold uppercase text-white">Resources</h2>
+                            <ul class="text-gray-400 font-medium">
+                                <li class="mb-4">
+                                    <a href="./about" class="link-foot">About</a>
+                                </li>
+                                <li>
+                                    <a href="./registration" class="link-foot">Registration</a>
+                                </li>
+                            </ul>
+                        </div>
                         <div>
                             <h2 class="mb-6 text-sm font-semibold uppercase text-white">Contact us</h2>
                             <ul class="text-gray-400 font-medium">
