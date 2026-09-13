@@ -1,3 +1,42 @@
+<style>
+    @media (min-width: 640px) {
+        #full-nav .dropdown {
+            position: relative;
+        }
+
+        #full-nav .dropdown-menu {
+            position: absolute !important;
+            top: 100%;
+            left: 0;
+            z-index: 60;
+            display: flex !important;
+            min-width: 12rem;
+            flex-direction: column;
+            padding-top: 1rem;
+            opacity: 0 !important;
+            pointer-events: none !important;
+            visibility: hidden !important;
+            transform: translateY(-0.5rem);
+            transition: opacity 150ms ease, transform 150ms ease, visibility 150ms ease;
+        }
+
+        #full-nav .dropdown:hover .dropdown-menu,
+        #full-nav .dropdown:focus-within .dropdown-menu {
+            opacity: 1 !important;
+            pointer-events: auto !important;
+            visibility: visible !important;
+            transform: translateY(0);
+        }
+
+        #full-nav .subtitle-link {
+            display: block;
+            background: rgb(17 24 39);
+            padding: 0.75rem 1rem;
+            white-space: nowrap;
+            color: white;
+        }
+    }
+</style>
 <div id="full-nav" class="absolute w-full top-0 py-5 z-50 transition ease-linear">
     <div class="max-w-6xl mx-auto px-6">
         <div class="flex items-center container">
@@ -23,7 +62,8 @@
                     </div>
                 </div>
                 <div class="dropdown ml-8 font-semibold uppercase text-sm">
-                    <a class="title-link ml-8 font-semibold uppercase text-sm" href="https://illinoismun.org">Club</a>
+                    <a class="title-link ml-8 font-semibold uppercase text-sm" href="https://illinoismun.org"
+                        target="_blank" rel="noopener noreferrer">Club</a>
 
                 </div>
                 <!-- <div class="dropdown ml-8 font-semibold uppercase text-sm">
@@ -87,7 +127,8 @@
             <a class="font-semibold uppercase text-sm my-4" href="./crisis">Crisis Committees</a>
         </div>
         <a class="font-semibold uppercase text-sm my-4" href="./contact">Contact</a>
-        <a class="font-semibold uppercase text-sm my-4" href="https://illinoismun.org">Club</a>
+        <a class="font-semibold uppercase text-sm my-4" href="https://illinoismun.org" target="_blank"
+            rel="noopener noreferrer">Club</a>
 
         <a class="font-semibold uppercase text-sm my-4" href="javascript:void(0)"
             onclick="toggleSubmenu('archive')">Archive</a>
