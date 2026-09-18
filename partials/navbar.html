@@ -36,13 +36,41 @@
             color: white;
         }
     }
+
+    /* Sidenav submenus: anchors are inline by default, which makes the items
+       run together on one line. Block them so they stack and so their my-4
+       vertical margins take effect. */
+    #sidenav .submenu {
+        text-align: right;1
+    }
+
+    #sidenav .submenu a {
+        display: block;
+        color: lightgray;
+        opacity: 0.7;
+        transition: color 0.3s ease, opacity 0.3s ease;
+    }
+
+    #sidenav .submenu a:hover {
+        color: white;
+        opacity: 1;
+    }
+
+    /* Nav links switch on at 640px (sm:flex) but the hamburger only switches
+       off at 768px (md:hidden), so both rendered between 640-767px.
+       Align the links to the hamburger's 768px breakpoint. */
+    @media (max-width: 767px) {
+        #nav-links {
+            display: none !important;
+        }
+    }
 </style>
 <div id="full-nav" class="absolute w-full top-0 py-5 z-50 transition ease-linear">
     <div class="max-w-6xl mx-auto px-6">
         <div class="flex items-center container">
             <a href="./"><img id="logo-area" src="../assets/model-un-logo-outline.png" alt="logo" style="float: left;"
                     class="w-32"></a>
-            <div class="ml-auto sm:flex text-white font-sans hidden">
+            <div id="nav-links" class="ml-auto sm:flex text-white font-sans hidden">
 
                 <div class="dropdown ml-8 font-semibold uppercase text-sm">
                     <a class="title-link ml-8 font-semibold uppercase text-sm">MUNI XXIX</a>

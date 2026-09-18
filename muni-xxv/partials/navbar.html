@@ -1,9 +1,19 @@
+<style>
+    /* Nav links switch on at 640px (sm:flex) but the hamburger only switches
+       off at 768px (md:hidden), so both rendered between 640-767px.
+       Align the links to the hamburger's 768px breakpoint. */
+    @media (max-width: 767px) {
+        #nav-links {
+            display: none !important;
+        }
+    }
+</style>
 <div id="full-nav" class="mt-10 absolute w-full top-0 py-5 z-20 transition ease-linear">
                 <div class="max-w-6xl mx-auto px-6">
                     <div class="flex items-center container">
                         <a href="./"><img id="logo-area" src="../assets/model-un-logo-outline.png" alt="logo"
                                 style="float: left;" class="w-32"></a>
-                        <div class="ml-auto sm:flex text-white font-sans hidden">
+                        <div id="nav-links" class="ml-auto sm:flex text-white font-sans hidden">
                             <div class="dropdown ml-8 font-semibold uppercase text-sm">
                                 <a class="title-link ml-8 font-semibold uppercase text-sm">MUNI XXV</a>
                                 <div class="dropdown-menu">
