@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Committees | MUNI XXIX</title>
+    <link rel="stylesheet" href="dist/style.css">
+    <link rel="stylesheet" href="dist/index.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <style>
+        .committee-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(18rem, 18rem));
+            justify-content: center;
+            gap: 2rem;
+            padding: 2.5rem 1rem;
+        }
+
+        .committee-link {
+            display: block;
+            width: 18rem;
+        }
+
+        .committee-tile {
+            display: flex;
+            width: 18rem;
+            height: 18rem;
+            align-items: center;
+            justify-content: center;
+            background-position: center;
+            background-size: cover;
+            text-align: center;
+            transition: filter 200ms ease-in-out;
+        }
+
+        .committee-tile:hover {
+            filter: brightness(75%);
+        }
+
+        .committee-title {
+            padding: 1rem;
+            color: white;
+            font-size: 1.25rem;
+            font-weight: 800;
+            line-height: 1.25;
+            text-align: center;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        @media (max-width: 640px) {
+            .committee-grid {
+                grid-template-columns: minmax(0, 18rem);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="relative">
+        <!-- START NAVIGATION -->
+        <div id="navbar-placeholder"></div>
+        <!-- END NAVIGATION -->
+
+        <section
+            class="relative flex min-h-screen h-[100vh] shrink-0 flex-col items-center justify-center font-serif text-white -z-10">
+            <video class="fixed brightness-50 w-full h-full object-cover" muted autoplay loop playsinline
+                disablepictureinpicture style="background-color:#000;">
+                <source src="assets/committees.mp4" type="video/mp4" />
+            </video>
+
+            <h1 class="fixed max-w-5xl text-5xl sm:text-6xl font-bold text-center leading-tight md:leading-snug">
+                Committees
+            </h1>
+
+            <svg fill="#ffffff" class="z-10 fixed animate-bounce bottom-10" height="5vh" version="1.1" id="Layer_1"
+                xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 330 330"
+                xml:space="preserve">
+                <path id="XMLID_225_" d="M325.607,79.393c-5.857-5.857-15.355-5.858-21.213,0.001l-139.39,139.393L25.607,79.393
+                c-5.857-5.857-15.355-5.858-21.213,0.001c-5.858,5.858-5.858,15.355,0,21.213l150.004,150c2.813,2.813,6.628,4.393,10.606,4.393
+                s7.794-1.581,10.606-4.394l149.996-150C331.465,94.749,331.465,85.251,325.607,79.393z" />
+            </svg>
+        </section>
+
+        <section class="w-full z-20 bg-white h-full">
+            <div class="w-full px-16 md:px-0 mx-auto">
+                <h1 class="pt-16 text-3xl uppercase flex items-center tracking-wide justify-center text-center">
+                    General Assemblies</h1>
+                <hr class="my-6 border-gray-300 w-72 mx-auto">
+
+                <div class="committee-grid mx-auto max-w-5xl">
+                    <a href="./lon">
+                        <div class="committee-tile"
+                            style="background-image: linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)), url('Committee Photos/LON.jpg');">
+                            <h1 class="committee-title">
+                                League of Nations</h1>
+                        </div>
+                    </a>
+                    <a href="./eu">
+                        <div class="committee-tile"
+                            style="background-image: linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)), url('Committee Photos/EU.png');">
+                            <h1 class="committee-title">
+                                European Commission</h1>
+                        </div>
+                    </a>
+                    <a href="./fifa">
+                        <div class="committee-tile"
+                            style="background-image: linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)), url('Committee Photos/FIFA.png');">
+                            <h1 class="committee-title">
+                                FIFA Executive Committee</h1>
+                        </div>
+                    </a>
+                </div>
+
+                <h1 class="pt-16 text-3xl uppercase flex items-center tracking-wide justify-center text-center">
+                    Crisis Committees</h1>
+                <hr class="my-6 border-gray-300 w-72 mx-auto">
+
+                <div class="committee-grid mx-auto max-w-3xl">
+                    <a href="./fiume">
+                        <div class="committee-tile"
+                            style="background-image: linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)), url('Committee Photos/fiume.jpg');">
+                            <h1 class="committee-title">
+                                City State of Fiume</h1>
+                        </div>
+                    </a>
+                    <a href="./avatar">
+                        <div class="committee-tile"
+                            style="background-image: linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)), url('Committee Photos/Avatar.jpg');">
+                            <h1 class="committee-title">
+                                Yu Dao</h1>
+                        </div>
+                    </a>
+                </div>
+
+                <h1 class="pt-16 text-3xl uppercase flex items-center tracking-wide justify-center text-center">
+                    Specialized Committees</h1>
+                <hr class="my-6 border-gray-300 w-72 mx-auto">
+
+                <div class="committee-grid mx-auto max-w-3xl">
+                    <a href="./adhoc">
+                        <div class="committee-tile"
+                            style="background-image: linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)), url('Committee Photos/ADHOC.jpg');">
+                            <h1 class="committee-title">
+                                Ad-Hoc Committee</h1>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <script src="partials/include.js"></script>
+</body>
+
+</html>
